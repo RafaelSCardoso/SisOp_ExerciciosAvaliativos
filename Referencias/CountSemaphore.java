@@ -11,6 +11,7 @@
 // a classe abaixo especifica um contador onde cada incremento
 // faz a protecao para exclusao mutua.   Ela usa um semaforo
 // iniciado em 1 para isso.
+import java.util.concurrent.Semaphore;
 class CounterSema {
 	
 	private  int n;   

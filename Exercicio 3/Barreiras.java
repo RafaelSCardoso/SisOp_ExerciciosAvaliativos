@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
-
 public class Barreiras {
     private final static int MATRIZ_SIZE = 5;
     private static int MAX_RANDOM = 51;

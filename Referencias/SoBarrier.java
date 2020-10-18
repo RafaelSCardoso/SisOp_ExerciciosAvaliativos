@@ -12,13 +12,13 @@ import java.util.concurrent.Semaphore;
 
 class Barrier {
 	
-	private Semaphore mutex;  
+	private Semaphore mutex;
 	private Semaphore catraca1;  
 	private Semaphore catraca2;  
 	private int count;         // nro que chegou
 	private int n;             // nro de threads a chegar na barreira
 	
-	public Barrier(int nmax){ 	
+	public Barrier(int nmax){
 		n = nmax;
 		count = 0;
         mutex = new Semaphore(1);

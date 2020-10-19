@@ -45,7 +45,8 @@ public class JantarDois {
                 System.out.println(espaco+ i + ": Pensa ");
                 
                 // pega um garfo
-                try{if (g2.availablePermits() == 0){
+                try{
+                    if (g2.availablePermits() == 0){
                         g1.acquire();
                         System.out.println(espaco+ i + ": Pegou um ");
                     }

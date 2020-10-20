@@ -57,6 +57,7 @@ public class JantarUm {
         */
         public void run() {
             for(int comeu = 0; comeu < comeQuantos;) {
+            // while(true){
                 // pensa
                 System.out.println(espaco+ i + ": Pensa ");
                 
@@ -65,7 +66,7 @@ public class JantarUm {
                 catch(InterruptedException ie){}
                 System.out.println(espaco+ i + ": Pega um");
 
-                try{if(g2.tryAcquire(100, TimeUnit.MILLISECONDS) == false){
+                try{if(g2.tryAcquire(1, TimeUnit.NANOSECONDS) == false){
                         g1.release();
                         System.out.println(espaco+ i + ": Solta um");
                     } else {
@@ -78,11 +79,6 @@ public class JantarUm {
                     }
                 }
                 catch(InterruptedException ie){}
-   
-                // come
-                // solta garfos
-                // g1.release();
-                // g2.release();
             }
             System.out.println(espaco+ i + ": Encheu o bucho.");
         }

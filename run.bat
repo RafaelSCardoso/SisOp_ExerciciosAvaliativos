@@ -5,6 +5,7 @@
 	
 	if NOT defined invokeParam (
 		ECHO Execute o batch passando por parametro o numero do exercicio. Ex: ./run.bat 1
+		PAUSE
 		EXIT
 	)
 
@@ -14,7 +15,6 @@
 		javac -d %binPath% "./Exercicio %invokeParam%/"*.java
 		if NOT ["%ERRORLEVEL%"]==["0"] ( PAUSE EXIT )
 
-	cd %binPath%
-	java Main	
+	java -cp %binPath% Main
 
-EXIT
+rem EXIT

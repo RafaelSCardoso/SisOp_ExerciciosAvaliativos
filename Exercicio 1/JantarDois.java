@@ -40,7 +40,8 @@ public class JantarDois {
             Caso o próximo garfo não esteja disponível, o filosofo só aguarda.
         */
         public void run() {
-            for(int comeu = 0; comeu < comeQuantos; comeu++) {
+            for(int comeu = 0; comeu < comeQuantos;) {
+            // while(true){
                 // pensa
                 System.out.println(espaco+ i + ": Pensa ");
                 
@@ -52,9 +53,12 @@ public class JantarDois {
                     }
                 }
                 catch(InterruptedException ie){}
+
                 // pega outro garfo
-                try{ g2.acquire();
-                    System.out.println(espaco+ i + ": Pegou dois, come ");	
+                try{ 
+                    g2.acquire();
+                    System.out.println(espaco+ i + ": Pegou dois, come ");
+                    comeu++;
                 }
                 catch(InterruptedException ie){}
                         	   

@@ -3,7 +3,6 @@ import java.util.concurrent.Semaphore;
 public class Producer extends Thread{
  
     private static final String espaco = "";
-    private Consumer consumer;
     private Buffer buffer;
     private Semaphore smp;
 
